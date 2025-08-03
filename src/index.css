@@ -98,6 +98,26 @@
     transform: none;
   }
 
+  /* Global button consistency - ensure all buttons match homepage style across dark backgrounds */
+  button[class*="inline-flex"][class*="items-center"][class*="justify-center"] {
+    font-weight: 600;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Ensure outline buttons work well on dark backgrounds globally */
+  button[class*="border"][class*="bg-background"]:not([class*="btn-"]) {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    backdrop-filter: blur(2px);
+  }
+
+  button[class*="border"][class*="bg-background"]:not([class*="btn-"]):hover {
+    background: rgba(255, 255, 255, 0.16) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+  }
+
   /* Shimmer animation for animated select button */
   @keyframes shimmer {
     0% {
