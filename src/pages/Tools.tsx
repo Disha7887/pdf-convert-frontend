@@ -148,13 +148,16 @@ export const Tools: React.FC = () => {
       {/* Filter Buttons */}
       <div className="w-full py-8 px-4 sm:px-8 lg:px-20">
         <div className="max-w-screen-xl mx-auto">
-          <div className="flex justify-center gap-2 sm:gap-3 flex-wrap pb-8">
+          <div className="flex justify-center gap-2 sm:gap-3 flex-wrap pb-8" role="tablist" aria-label="Tool categories">
             {filterButtons.map((buttonName, index) => (
               <Button
                 key={index}
                 variant={activeFilter === buttonName ? "default" : "outline"}
-                className="px-3 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-sm sm:text-base"
+                className="px-3 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-300 hover:scale-105 focus:scale-105"
                 onClick={() => setActiveFilter(buttonName)}
+                role="tab"
+                aria-selected={activeFilter === buttonName}
+                aria-controls={`tools-${buttonName.toLowerCase().replace(' ', '-')}`}
               >
                 {buttonName}
               </Button>
