@@ -9,23 +9,23 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "btn-red-gradient text-white",
+          "btn-red-gradient text-white shadow-[0px_4px_6px_-1px_#0000001a,0px_2px_4px_-1px_#0000001a] hover:shadow-[0px_10px_15px_-3px_#0000001a,0px_4px_6px_-4px_#0000001a] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]",
         destructive:
-          "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90 transition-all duration-200",
+          "btn-red-gradient text-white shadow-[0px_4px_6px_-1px_#0000001a,0px_2px_4px_-1px_#0000001a] hover:shadow-[0px_10px_15px_-3px_#0000001a,0px_4px_6px_-4px_#0000001a] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]",
         outline:
-          "border border-input bg-background text-foreground shadow-sm hover:bg-accent hover:text-accent-foreground transition-all duration-200",
+          "bg-[#ffffff1a] text-white rounded-lg border-2 border-solid border-[#ffffff33] backdrop-blur-[2px] hover:bg-[#ffffff2a] hover:border-[#ffffff44] transition-all duration-200",
         secondary:
-          "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 transition-all duration-200",
-        ghost: "text-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-200",
-        link: "text-primary underline-offset-4 hover:underline transition-all duration-200",
-        blue: "btn-blue-gradient text-white",
-        green: "btn-green-gradient text-white",
+          "bg-[#ffffff1a] text-white border border-[#4a5462] hover:bg-[#4a5462] transition-all duration-200",
+        ghost: "text-white hover:bg-[#ffffff1a] hover:text-white transition-all duration-200",
+        link: "text-red-300 underline-offset-4 hover:underline transition-all duration-200",
+        blue: "btn-blue-gradient text-white shadow-[0px_4px_6px_-1px_#0000001a,0px_2px_4px_-1px_#0000001a] hover:shadow-[0px_10px_15px_-3px_#0000001a,0px_4px_6px_-4px_#0000001a] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]",
+        green: "btn-green-gradient text-white shadow-[0px_4px_6px_-1px_#0000001a,0px_2px_4px_-1px_#0000001a] hover:shadow-[0px_10px_15px_-3px_#0000001a,0px_4px_6px_-4px_#0000001a] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]",
       },
       size: {
-        default: "h-9 px-4 py-2",
-        sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-10 rounded-md px-8",
-        icon: "h-9 w-9",
+        default: "h-10 px-6 py-2",
+        sm: "h-8 rounded-md px-4 text-xs",
+        lg: "h-12 rounded-lg px-8 text-base font-semibold",
+        icon: "h-10 w-10",
       },
     },
     defaultVariants: {
