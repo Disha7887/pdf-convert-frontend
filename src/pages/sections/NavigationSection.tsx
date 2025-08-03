@@ -78,13 +78,13 @@ export const NavigationSection = (): JSX.Element => {
           <div className="flex items-center space-x-3">
             <Button
               variant="outline"
-              className="h-[42px] px-[17px] py-[9px] rounded-lg border border-[#4a5462] [font-family:'Roboto',Helvetica] font-medium !text-white text-base hover:!text-white hover:bg-[#4a5462] transition-colors bg-transparent"
+              className="h-[42px] px-[17px] py-[9px] [font-family:'Roboto',Helvetica] font-medium text-base"
               onClick={() => setLocation('/signin')}
             >
               Log In
             </Button>
             <Button
-              className="h-10 px-6 py-2 rounded-lg [font-family:'Roboto',Helvetica] font-medium text-base [text-shadow:0px_10px_15px_#0000001a]"
+              className="h-10 px-6 py-2 [font-family:'Roboto',Helvetica] font-medium text-base"
               onClick={handleGetStarted}
             >
               Get Started
