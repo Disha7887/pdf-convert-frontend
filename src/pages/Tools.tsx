@@ -95,8 +95,10 @@ const ToolCard: React.FC<ToolCardProps> = ({ toolConfig, onSelectFiles, onNaviga
         <Button
           onClick={handleCardClick}
           className="w-full h-14 font-semibold rounded-xl"
+          aria-label={`${toolConfig.buttonText} for ${toolConfig.title}`}
+          aria-describedby={`tool-desc-${toolConfig.title.replace(/\s+/g, '-').toLowerCase()}`}
         >
-          <Upload className="w-4 h-4 mr-2" />
+          <Upload className="w-4 h-4 mr-2" aria-hidden="true" />
           {toolConfig.buttonText}
         </Button>
       </div>
