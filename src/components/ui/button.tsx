@@ -4,22 +4,22 @@ import * as React from "react";
 import { cn } from "../../lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all duration-200 ease-in-out focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         default:
-          "btn-red-gradient text-white shadow-[0px_4px_6px_-1px_#0000001a,0px_2px_4px_-1px_#0000001a] hover:shadow-[0px_10px_15px_-3px_#0000001a,0px_4px_6px_-4px_#0000001a] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]",
+          "btn-red-gradient text-white shadow-[0px_4px_6px_-1px_#0000001a,0px_2px_4px_-1px_#0000001a] hover:shadow-[0px_10px_15px_-3px_#0000001a,0px_4px_6px_-4px_#0000001a] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] focus:text-white",
         destructive:
-          "btn-red-gradient text-white shadow-[0px_4px_6px_-1px_#0000001a,0px_2px_4px_-1px_#0000001a] hover:shadow-[0px_10px_15px_-3px_#0000001a,0px_4px_6px_-4px_#0000001a] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]",
+          "btn-red-gradient text-white shadow-[0px_4px_6px_-1px_#0000001a,0px_2px_4px_-1px_#0000001a] hover:shadow-[0px_10px_15px_-3px_#0000001a,0px_4px_6px_-4px_#0000001a] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] focus:text-white",
         outline:
-          "bg-[#ffffff1a] text-white rounded-lg border-2 border-solid border-[#ffffff33] backdrop-blur-[2px] hover:bg-[#ffffff2a] hover:border-[#ffffff44] transition-all duration-200",
+          "border-2 border-gray-300 bg-white text-gray-900 hover:bg-gray-50 hover:border-gray-400 hover:text-gray-900 focus:text-gray-900 shadow-sm hover:shadow-md transition-all duration-300",
         secondary:
-          "bg-[#ffffff1a] text-white border border-[#4a5462] hover:bg-[#4a5462] transition-all duration-200",
-        ghost: "text-white hover:bg-[#ffffff1a] hover:text-white transition-all duration-200",
-        link: "text-red-300 underline-offset-4 hover:underline transition-all duration-200",
-        blue: "btn-blue-gradient text-white shadow-[0px_4px_6px_-1px_#0000001a,0px_2px_4px_-1px_#0000001a] hover:shadow-[0px_10px_15px_-3px_#0000001a,0px_4px_6px_-4px_#0000001a] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]",
-        green: "btn-green-gradient text-white shadow-[0px_4px_6px_-1px_#0000001a,0px_2px_4px_-1px_#0000001a] hover:shadow-[0px_10px_15px_-3px_#0000001a,0px_4px_6px_-4px_#0000001a] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]",
+          "bg-gray-100 text-gray-900 border border-gray-300 hover:bg-gray-200 hover:text-gray-900 focus:text-gray-900 transition-all duration-300",
+        ghost: "text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:text-gray-900 transition-all duration-300",
+        link: "text-red-600 underline-offset-4 hover:underline hover:text-red-700 focus:text-red-700 transition-all duration-300",
+        blue: "btn-blue-gradient text-white shadow-[0px_4px_6px_-1px_#0000001a,0px_2px_4px_-1px_#0000001a] hover:shadow-[0px_10px_15px_-3px_#0000001a,0px_4px_6px_-4px_#0000001a] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] focus:text-white",
+        green: "btn-green-gradient text-white shadow-[0px_4px_6px_-1px_#0000001a,0px_2px_4px_-1px_#0000001a] hover:shadow-[0px_10px_15px_-3px_#0000001a,0px_4px_6px_-4px_#0000001a] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] focus:text-white",
       },
       size: {
         default: "h-10 px-6 py-2",
