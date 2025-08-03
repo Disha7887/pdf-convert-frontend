@@ -184,6 +184,47 @@
     color: rgb(156, 163, 175) !important;
   }
 
+  /* Special handling for outline buttons on dark backgrounds (like navigation) */
+  .bg-\\[\\#111726\\] button[class*="outline"],
+  header button[class*="outline"] {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    backdrop-filter: blur(2px);
+  }
+
+  .bg-\\[\\#111726\\] button[class*="outline"]:hover,
+  header button[class*="outline"]:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    color: white !important;
+  }
+
+  .bg-\\[\\#111726\\] button[class*="outline"]:focus,
+  header button[class*="outline"]:focus {
+    color: white !important;
+    outline-color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* Icon transitions */
+  svg {
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Card hover effects */
+  .hover\\:shadow-xl:hover {
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Link enhancements */
+  a:not(button) {
+    transition: color 0.3s ease-in-out;
+  }
+
+  a:not(button):hover {
+    text-decoration-color: currentColor;
+  }
+
   /* Shimmer animation for animated select button */
   @keyframes shimmer {
     0% {
