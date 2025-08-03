@@ -98,24 +98,34 @@
     transform: none;
   }
 
-  /* Global button consistency - ensure all buttons match homepage style across dark backgrounds */
+  /* Global button consistency - ensure all buttons match homepage style */
   button[class*="inline-flex"][class*="items-center"][class*="justify-center"] {
     font-weight: 600;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Ensure outline buttons work well on dark backgrounds globally */
-  button[class*="border"][class*="bg-background"]:not([class*="btn-"]) {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border-color: rgba(255, 255, 255, 0.2) !important;
-    color: white !important;
-    backdrop-filter: blur(2px);
+  /* Enhanced focus and active states for all buttons */
+  button[class*="inline-flex"]:focus-visible {
+    outline: 2px solid rgba(220, 38, 38, 0.5);
+    outline-offset: 2px;
   }
 
-  button[class*="border"][class*="bg-background"]:not([class*="btn-"]):hover {
-    background: rgba(255, 255, 255, 0.16) !important;
-    border-color: rgba(255, 255, 255, 0.3) !important;
-    color: white !important;
+  button[class*="inline-flex"]:active {
+    transform: scale(0.98);
+  }
+
+  /* Ensure consistent button styling across different page backgrounds */
+  .bg-gray-50 button[variant="outline"],
+  .bg-white button[variant="outline"] {
+    background: white;
+    border-color: rgba(107, 114, 128, 0.3);
+    color: rgb(55, 65, 81);
+  }
+
+  .bg-gray-50 button[variant="outline"]:hover,
+  .bg-white button[variant="outline"]:hover {
+    background: rgba(107, 114, 128, 0.05);
+    border-color: rgba(107, 114, 128, 0.4);
   }
 
   /* Shimmer animation for animated select button */
