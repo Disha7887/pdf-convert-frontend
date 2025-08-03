@@ -77,7 +77,10 @@ const ToolCard: React.FC<ToolCardProps> = ({ toolConfig, onSelectFiles, onNaviga
         </h3>
 
         {/* Description */}
-        <p className="text-sm text-gray-700 dark:text-gray-300 text-center mb-4 flex-grow flex items-center justify-center px-2 leading-relaxed transition-colors duration-300">
+        <p
+          className="text-sm text-gray-700 dark:text-gray-300 text-center mb-4 flex-grow flex items-center justify-center px-2 leading-relaxed transition-colors duration-300"
+          id={`tool-desc-${toolConfig.title.replace(/\s+/g, '-').toLowerCase()}`}
+        >
           {toolConfig.description}
         </p>
 
