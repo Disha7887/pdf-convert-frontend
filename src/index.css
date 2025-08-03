@@ -354,6 +354,58 @@
     max-height: 60vh;
     overflow-y: auto;
   }
+
+  /* Active button styles - only color changes, no borders/backgrounds */
+  .header-button.active,
+  .header-button:focus,
+  .header-button[aria-selected="true"] {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #ffffff !important;
+    ring: none !important;
+    outline: none !important;
+  }
+
+  .footer-button.active,
+  .footer-button:focus {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #ffffff !important;
+    ring: none !important;
+    outline: none !important;
+  }
+
+  /* Current navigation structure compatibility */
+  .NavigationMenuLink.active,
+  .NavigationMenuLink:focus {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #ffffff !important;
+    ring: none !important;
+    outline: none !important;
+  }
+
+  /* Footer links active state */
+  button.active {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #ffffff !important;
+    ring: none !important;
+    outline: none !important;
+  }
+
+  /* Override any existing focus states that add borders */
+  .header-button:focus-visible,
+  .footer-button:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    ring: none !important;
+  }
 }
 
 @layer base {
