@@ -4,28 +4,28 @@ import * as React from "react";
 import { cn } from "../../lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all duration-200 ease-in-out focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         default:
-          "btn-red-gradient text-white",
+          "btn-red-gradient text-white shadow-[0px_4px_6px_-1px_#0000001a,0px_2px_4px_-1px_#0000001a] hover:shadow-[0px_10px_15px_-3px_#0000001a,0px_4px_6px_-4px_#0000001a] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] focus:text-white",
         destructive:
-          "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90 transition-all duration-200",
+          "btn-red-gradient text-white shadow-[0px_4px_6px_-1px_#0000001a,0px_2px_4px_-1px_#0000001a] hover:shadow-[0px_10px_15px_-3px_#0000001a,0px_4px_6px_-4px_#0000001a] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] focus:text-white",
         outline:
-          "border border-input bg-background text-foreground shadow-sm hover:bg-accent hover:text-accent-foreground transition-all duration-200",
+          "border-2 border-gray-300 bg-white text-gray-900 hover:bg-gray-50 hover:border-gray-400 hover:text-gray-900 focus:text-gray-900 shadow-sm hover:shadow-md transition-all duration-300",
         secondary:
-          "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 transition-all duration-200",
-        ghost: "text-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-200",
-        link: "text-primary underline-offset-4 hover:underline transition-all duration-200",
-        blue: "btn-blue-gradient text-white",
-        green: "btn-green-gradient text-white",
+          "bg-gray-100 text-gray-900 border border-gray-300 hover:bg-gray-200 hover:text-gray-900 focus:text-gray-900 transition-all duration-300",
+        ghost: "text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:text-gray-900 transition-all duration-300",
+        link: "text-red-600 underline-offset-4 hover:underline hover:text-red-700 focus:text-red-700 transition-all duration-300",
+        blue: "btn-blue-gradient text-white shadow-[0px_4px_6px_-1px_#0000001a,0px_2px_4px_-1px_#0000001a] hover:shadow-[0px_10px_15px_-3px_#0000001a,0px_4px_6px_-4px_#0000001a] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] focus:text-white",
+        green: "btn-green-gradient text-white shadow-[0px_4px_6px_-1px_#0000001a,0px_2px_4px_-1px_#0000001a] hover:shadow-[0px_10px_15px_-3px_#0000001a,0px_4px_6px_-4px_#0000001a] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] focus:text-white",
       },
       size: {
-        default: "h-9 px-4 py-2",
-        sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-10 rounded-md px-8",
-        icon: "h-9 w-9",
+        default: "h-10 px-6 py-2",
+        sm: "h-8 rounded-md px-4 text-xs",
+        lg: "h-12 rounded-lg px-8 text-base font-semibold",
+        icon: "h-10 w-10",
       },
     },
     defaultVariants: {

@@ -7,27 +7,28 @@
     all: unset;
   }
 
-  /* Enhanced button styles for better hover effects */
+  /* Enhanced button styles for better hover effects - Homepage consistent styling */
   .btn-red-gradient {
     background: linear-gradient(90deg, rgba(220, 38, 38, 1) 0%, rgba(185, 28, 28, 1) 100%);
-    color: white;
+    color: white !important;
     font-weight: 600;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     border: none;
     outline: none;
   }
 
   .btn-red-gradient:hover {
-    background: linear-gradient(90deg, rgba(185, 28, 28, 1) 0%, rgba(153, 27, 27, 1) 100%);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    transform: translateY(-1px);
+    background: linear-gradient(90deg, rgba(185, 28, 28, 1) 0%, rgba(153, 27, 27, 1) 100%) !important;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+    color: white !important;
   }
 
   .btn-red-gradient:active {
     transform: translateY(0px) scale(0.98);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
   .btn-red-gradient:focus-visible {
@@ -95,6 +96,133 @@
     opacity: 0.5;
     pointer-events: none;
     transform: none;
+  }
+
+  /* Global button consistency with enhanced accessibility */
+  button[class*="inline-flex"][class*="items-center"][class*="justify-center"] {
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Enhanced focus states for accessibility */
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 3px solid rgba(220, 38, 38, 0.6);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8);
+  }
+
+  /* Enhanced active states */
+  button:active {
+    transform: scale(0.98);
+    transition-duration: 0.1s;
+  }
+
+  /* Global text contrast improvements */
+  .text-gray-600 {
+    color: rgb(75, 85, 99) !important; /* Darker gray for better contrast */
+  }
+
+  .text-gray-400 {
+    color: rgb(107, 114, 128) !important; /* Darker gray for better contrast */
+  }
+
+  .text-gray-500 {
+    color: rgb(107, 114, 128) !important; /* Darker gray for better contrast */
+  }
+
+  /* Tool card text improvements */
+  .bg-gradient-to-br .text-gray-600 {
+    color: rgb(55, 65, 81) !important; /* Much darker for light backgrounds */
+  }
+
+  .bg-gradient-to-br .text-gray-400 {
+    color: rgb(75, 85, 99) !important; /* Much darker for light backgrounds */
+  }
+
+  /* Enhanced transitions for interactive elements */
+  a, button, input, textarea, select {
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Hover transitions for links */
+  a:hover {
+    transition-duration: 0.2s;
+  }
+
+  /* Form input enhancements */
+  input, textarea, select {
+    border-color: rgba(107, 114, 128, 0.4);
+    background-color: white;
+    color: rgb(17, 24, 39);
+  }
+
+  input:focus, textarea:focus, select:focus {
+    border-color: rgba(220, 38, 38, 0.5);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: rgb(107, 114, 128) !important;
+    opacity: 1;
+  }
+
+  /* Dark theme adjustments */
+  [data-theme="dark"] input,
+  [data-theme="dark"] textarea,
+  [data-theme="dark"] select {
+    background-color: rgba(31, 41, 55, 0.8);
+    border-color: rgba(75, 85, 99, 0.6);
+    color: rgb(243, 244, 246);
+  }
+
+  [data-theme="dark"] input::placeholder,
+  [data-theme="dark"] textarea::placeholder {
+    color: rgb(156, 163, 175) !important;
+  }
+
+  /* Special handling for outline buttons on dark backgrounds (like navigation) */
+  .bg-\\[\\#111726\\] button[class*="outline"],
+  header button[class*="outline"] {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    backdrop-filter: blur(2px);
+  }
+
+  .bg-\\[\\#111726\\] button[class*="outline"]:hover,
+  header button[class*="outline"]:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    color: white !important;
+  }
+
+  .bg-\\[\\#111726\\] button[class*="outline"]:focus,
+  header button[class*="outline"]:focus {
+    color: white !important;
+    outline-color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* Icon transitions */
+  svg {
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Card hover effects */
+  .hover\\:shadow-xl:hover {
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Link enhancements */
+  a:not(button) {
+    transition: color 0.3s ease-in-out;
+  }
+
+  a:not(button):hover {
+    text-decoration-color: currentColor;
   }
 
   /* Shimmer animation for animated select button */
