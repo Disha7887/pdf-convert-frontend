@@ -94,7 +94,7 @@ const ToolCard: React.FC<ToolCardProps> = ({ toolConfig, onSelectFiles, onNaviga
         {/* Button */}
         <Button
           onClick={handleCardClick}
-          className="w-full h-14 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 dark:from-blue-600 dark:to-blue-700 text-white font-semibold rounded-xl shadow-lg transition-all hover:shadow-xl"
+          className="w-full h-14 font-semibold rounded-xl"
         >
           <Upload className="w-4 h-4 mr-2" />
           {toolConfig.buttonText}
@@ -153,11 +153,7 @@ export const Tools: React.FC = () => {
               <Button
                 key={index}
                 variant={activeFilter === buttonName ? "default" : "outline"}
-                className={`px-3 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-sm sm:text-base ${
-                  activeFilter === buttonName
-                    ? "bg-blue-600 text-white shadow-lg hover:bg-blue-700"
-                    : "bg-white text-gray-700 border-gray-300 hover:bg-gray-50"
-                }`}
+                className="px-3 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-sm sm:text-base"
                 onClick={() => setActiveFilter(buttonName)}
               >
                 {buttonName}
