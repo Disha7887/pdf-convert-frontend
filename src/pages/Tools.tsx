@@ -174,15 +174,28 @@ export const Tools: React.FC = () => {
       {/* Tools Grid */}
       <div className="w-full px-4 sm:px-8 lg:px-20 pb-16">
         <div className="max-w-screen-xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 place-items-center">
-            {filteredTools.map((tool, index) => (
-              <ToolCard
-                key={index}
-                toolConfig={tool}
-                onSelectFiles={() => handleSelectFiles(tool)}
-                onNavigateToTool={() => handleNavigateToTool(tool)}
-              />
-            ))}
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 place-items-center"
+            role="tabpanel"
+            id={`tools-${activeFilter.toLowerCase().replace(' ', '-')}`}
+            aria-label={`${activeFilter} tools`}
+          >
+            {filteredTools.length > 0 ? (
+              filteredTools.map((tool, index) => (
+                <ToolCard
+                  key={index}
+                  toolConfig={tool}
+                  onSelectFiles={() => handleSelectFiles(tool)}
+                  onNavigateToTool={() => handleNavigateToTool(tool)}
+                />
+              ))
+            ) : (
+              <div className="col-span-full text-center py-12">
+                <p className="text-gray-600 text-lg" role="status" aria-live="polite">
+                  No tools found in the {activeFilter} category.
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </div>
